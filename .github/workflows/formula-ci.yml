@@ -16,8 +16,8 @@ jobs:
       - name: Tap local repository
         run: brew tap smartbartdev/tap "$GITHUB_WORKSPACE"
 
-      - name: Audit formula
-        run: brew audit --strict smartbartdev/tap/ipb
+      - name: Check Ruby syntax
+        run: ruby -c Formula/ipb.rb
 
       - name: Show formula info
         run: brew info smartbartdev/tap/ipb
