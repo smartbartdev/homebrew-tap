@@ -1,0 +1,23 @@
+name: Formula CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  ipb-formula:
+    runs-on: macos-latest
+    steps:
+      - name: Check out tap repository
+        uses: actions/checkout@v4
+
+      - name: Tap local repository
+        run: brew tap smartbartdev/tap "$GITHUB_WORKSPACE"
+
+      - name: Install formula from source
+        run: brew reinstall --build-from-source smartbartdev/tap/ipb
+
+      - name: Run formula test
+        run: brew test smartbartdev/tap/ipb
