@@ -3,8 +3,8 @@ class Ipb < Formula
 
   desc "Incremental iCloud Photos backup CLI for macOS"
   homepage "https://github.com/smartbartdev/icloud-photos-sync"
-  url "https://github.com/smartbartdev/icloud-photos-sync/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "76da459897bb6d1466613e2bff4c6bf7ab71b1c1b010eb39a6ef3fca44060f25"
+  url "https://github.com/smartbartdev/icloud-photos-sync/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "f6c912f955e640a1802558d697faa63042221c285ff3ad1f64edc9e3b0d6c0b3"
   license "MIT"
 
   depends_on "python@3.11"
