@@ -127,7 +127,14 @@ class Ipb < Formula
   def install
     venv = virtualenv_create(libexec, "python3.11")
     resources.each do |r|
-      venv.pip_install r.cached_download
+      r.stage do
+        wheel = Dir["*.whl"].first
+        if wheel
+          venv.pip_install wheel
+        else
+          venv.pip_install Pathname.pwd
+        end
+      end
     end
     venv.pip_install buildpath
     bin.install_symlink libexec/"bin/ipb"
