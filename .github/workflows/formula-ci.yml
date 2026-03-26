@@ -11,7 +11,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Check out tap repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Tap local repository
         run: brew tap smartbartdev/tap "$GITHUB_WORKSPACE"

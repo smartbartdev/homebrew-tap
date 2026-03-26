@@ -7,6 +7,7 @@ class Ipb < Formula
   sha256 "f6c912f955e640a1802558d697faa63042221c285ff3ad1f64edc9e3b0d6c0b3"
   license "MIT"
 
+  depends_on "cryptography"
   depends_on "python@3.11"
 
   resource "backports.tarfile" do
@@ -19,11 +20,6 @@ class Ipb < Formula
     sha256 "027692e4402ad994f1c42e52a4997a9763c646b73e4096e4d5d6db8af1d6f0fa"
   end
 
-  resource "cffi" do
-    url "https://files.pythonhosted.org/packages/4f/8b/f0e4c441227ba756aafbe78f117485b25bb26b1c059d01f137fa6d14896b/cffi-2.0.0-cp311-cp311-macosx_11_0_arm64.whl"
-    sha256 "2de9a304e27f7596cd03d16f1b7c72219bd944e99cc52b84d0145aefb07cbd3c"
-  end
-
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/62/28/ff6f234e628a2de61c458be2779cb182bc03f6eec12200d4a525bbfc9741/charset_normalizer-3.4.6-cp311-cp311-macosx_10_9_universal2.whl"
     sha256 "82060f995ab5003a2d6e0f4ad29065b7672b6593c8c63559beefe5b443242c3e"
@@ -32,11 +28,6 @@ class Ipb < Formula
   resource "click" do
     url "https://files.pythonhosted.org/packages/98/78/01c019cdb5d6498122777c1a43056ebb3ebfeef2076d9d026bfe15583b2b/click-8.3.1-py3-none-any.whl"
     sha256 "981153a64e25f12d547d3426c367a4857371575ee7ad18df2a6183ab0545b2a6"
-  end
-
-  resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/47/23/9285e15e3bc57325b0a72e592921983a701efc1ee8f91c06c5f0235d86d9/cryptography-46.0.6-cp311-abi3-macosx_10_9_universal2.whl"
-    sha256 "64235194bad039a10bb6d2d930ab3323baaec67e2ce36215fd0952fad0930ca8"
   end
 
   resource "fido2" do
@@ -82,11 +73,6 @@ class Ipb < Formula
   resource "more-itertools" do
     url "https://files.pythonhosted.org/packages/a4/8e/469e5a4a2f5855992e425f3cb33804cc07bf18d48f2db061aec61ce50270/more_itertools-10.8.0-py3-none-any.whl"
     sha256 "52d4362373dcf7c52546bc4af9a86ee7c4579df9a8dc268be0a2f949d376cc9b"
-  end
-
-  resource "pycparser" do
-    url "https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl"
-    sha256 "b727414169a36b7d524c1c3e31839a521725078d7b2ff038656844266160a992"
   end
 
   resource "pyicloud" do
