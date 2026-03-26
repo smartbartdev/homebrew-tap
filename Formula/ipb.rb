@@ -125,7 +125,12 @@ class Ipb < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_create(libexec, "python3.11")
+    resources.each do |r|
+      venv.pip_install r.cached_download
+    end
+    venv.pip_install buildpath
+    bin.install_symlink libexec/"bin/ipb"
   end
 
   test do
