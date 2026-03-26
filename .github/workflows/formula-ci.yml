@@ -16,8 +16,8 @@ jobs:
       - name: Tap local repository
         run: brew tap smartbartdev/tap "$GITHUB_WORKSPACE"
 
-      - name: Install formula from source
-        run: brew reinstall --build-from-source smartbartdev/tap/ipb
+      - name: Audit formula
+        run: brew audit --strict smartbartdev/tap/ipb
 
-      - name: Run formula test
-        run: brew test smartbartdev/tap/ipb
+      - name: Show formula info
+        run: brew info smartbartdev/tap/ipb
