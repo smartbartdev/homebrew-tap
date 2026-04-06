@@ -6,8 +6,8 @@ class Ipb < Formula
   url "https://github.com/smartbartdev/icloud-photos-sync/archive/refs/tags/v1.2.1.tar.gz"
   sha256 "ea4c1da8a29777770b6306698f70c1f32104e74f5ca8d177a11fbab6e57a02b1"
   license "MIT"
+  revision 1
 
-  depends_on "cryptography"
   depends_on "python@3.11"
 
   resource "backports.tarfile" do
@@ -20,6 +20,11 @@ class Ipb < Formula
     sha256 "027692e4402ad994f1c42e52a4997a9763c646b73e4096e4d5d6db8af1d6f0fa"
   end
 
+  resource "cffi" do
+    url "https://files.pythonhosted.org/packages/eb/56/b1ba7935a17738ae8453301356628e8147c79dbb825bcbc73dc7401f9846/cffi-2.0.0.tar.gz"
+    sha256 "44d1b5909021139fe36001ae048dbdde8214afa20200eda0f64c068cac5d5529"
+  end
+
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/62/28/ff6f234e628a2de61c458be2779cb182bc03f6eec12200d4a525bbfc9741/charset_normalizer-3.4.6-cp311-cp311-macosx_10_9_universal2.whl"
     sha256 "82060f995ab5003a2d6e0f4ad29065b7672b6593c8c63559beefe5b443242c3e"
@@ -28,6 +33,11 @@ class Ipb < Formula
   resource "click" do
     url "https://files.pythonhosted.org/packages/98/78/01c019cdb5d6498122777c1a43056ebb3ebfeef2076d9d026bfe15583b2b/click-8.3.1-py3-none-any.whl"
     sha256 "981153a64e25f12d547d3426c367a4857371575ee7ad18df2a6183ab0545b2a6"
+  end
+
+  resource "cryptography" do
+    url "https://files.pythonhosted.org/packages/34/a3/ad08e0bcc34ad436013458d7528e83ac29910943cea42ad7dd4141a27bbb/cryptography-44.0.3-cp39-abi3-macosx_10_9_universal2.whl"
+    sha256 "5639c2b16764c6f76eedf722dbad9a0914960d3489c0cc38694ddf9464f1bb2f"
   end
 
   resource "fido2" do
@@ -78,6 +88,11 @@ class Ipb < Formula
   resource "pyicloud" do
     url "https://files.pythonhosted.org/packages/36/d2/875b873d54d3bc7dad37b50fd255b357f8adaa105af5bb2b02443cafc783/pyicloud-2.4.1-py3-none-any.whl"
     sha256 "a767ada7cc2961428f8c2d0ce327102ae7666e3835610945409247fcf9d85e68"
+  end
+
+  resource "pycparser" do
+    url "https://files.pythonhosted.org/packages/a0/e3/59cd50310fc9b59512193629e1984c1f95e5c8ae6e5d8c69532ccc65a7fe/pycparser-2.23-py3-none-any.whl"
+    sha256 "e5c6e8d3fbad53479cab09ac03729e0a9faf2bee3db8208a550daf5af81a5934"
   end
 
   resource "requests" do
